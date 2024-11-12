@@ -1,0 +1,8 @@
+{
+    "files": [
+        "MainWindow.py",
+        "UI/Widgets/Sidebar.py",
+        "UI/Widgets/Sidebar.ui",
+        "form.ui"
+    ]
+}
