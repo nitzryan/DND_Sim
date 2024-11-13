@@ -9,13 +9,15 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 #     pyside2-uic form.ui -o ui_form.py
 from ui_form import Ui_MainWindow
 
-from UI.Widgets import Sidebar
+from UI.Widgets.Sidebar import Sidebar
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.sidebar = Sidebar()
+        self.ui.sidebarLayout.addWidget(self.sidebar)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

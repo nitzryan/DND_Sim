@@ -16,7 +16,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QHBoxLayout, QMainWindow, QMenuBar,
-    QSizePolicy, QWidget)
+    QSizePolicy, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -27,15 +27,15 @@ class Ui_MainWindow(object):
         self.centralWidget.setObjectName(u"centralWidget")
         self.horizontalLayout = QHBoxLayout(self.centralWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.sidebarWidget = QWidget(self.centralWidget)
-        self.sidebarWidget.setObjectName(u"sidebarWidget")
+        self.sidebarLayout = QVBoxLayout()
+        self.sidebarLayout.setObjectName(u"sidebarLayout")
 
-        self.horizontalLayout.addWidget(self.sidebarWidget)
+        self.horizontalLayout.addLayout(self.sidebarLayout)
 
-        self.widget_2 = QWidget(self.centralWidget)
-        self.widget_2.setObjectName(u"widget_2")
+        self.mainLayout = QVBoxLayout()
+        self.mainLayout.setObjectName(u"mainLayout")
 
-        self.horizontalLayout.addWidget(self.widget_2)
+        self.horizontalLayout.addLayout(self.mainLayout)
 
         self.horizontalLayout.setStretch(1, 1)
         MainWindow.setCentralWidget(self.centralWidget)

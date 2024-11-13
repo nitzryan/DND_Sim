@@ -18,48 +18,56 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QPushButton, QSizePolicy, QSpacerItem,
     QVBoxLayout, QWidget)
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        if not Form.objectName():
-            Form.setObjectName(u"Form")
-        Form.resize(271, 464)
-        self.verticalLayout = QVBoxLayout(Form)
+class Ui_Sidebar(object):
+    def setupUi(self, Sidebar):
+        if not Sidebar.objectName():
+            Sidebar.setObjectName(u"Sidebar")
+        Sidebar.resize(271, 464)
+        self.verticalLayout = QVBoxLayout(Sidebar)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.pushButton = QPushButton(Form)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setSizeIncrement(QSize(1, 1))
-        self.pushButton.setBaseSize(QSize(1, 1))
+        self.pb_Train = QPushButton(Sidebar)
+        self.pb_Train.setObjectName(u"pb_Train")
+        self.pb_Train.setSizeIncrement(QSize(1, 1))
+        self.pb_Train.setBaseSize(QSize(1, 1))
 
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.pb_Train)
 
-        self.pushButton_2 = QPushButton(Form)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setSizeIncrement(QSize(1, 1))
-        self.pushButton_2.setBaseSize(QSize(1, 1))
+        self.pb_Editor = QPushButton(Sidebar)
+        self.pb_Editor.setObjectName(u"pb_Editor")
+        self.pb_Editor.setSizeIncrement(QSize(1, 1))
+        self.pb_Editor.setBaseSize(QSize(1, 1))
 
-        self.verticalLayout.addWidget(self.pushButton_2)
+        self.verticalLayout.addWidget(self.pb_Editor)
 
-        self.pushButton_3 = QPushButton(Form)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setSizeIncrement(QSize(1, 1))
-        self.pushButton_3.setBaseSize(QSize(1, 1))
+        self.pb_Tester = QPushButton(Sidebar)
+        self.pb_Tester.setObjectName(u"pb_Tester")
+        self.pb_Tester.setSizeIncrement(QSize(1, 1))
+        self.pb_Tester.setBaseSize(QSize(1, 1))
 
-        self.verticalLayout.addWidget(self.pushButton_3)
+        self.verticalLayout.addWidget(self.pb_Tester)
+
+        self.pb_Character = QPushButton(Sidebar)
+        self.pb_Character.setObjectName(u"pb_Character")
+        self.pb_Character.setSizeIncrement(QSize(1, 1))
+        self.pb_Character.setBaseSize(QSize(1, 1))
+
+        self.verticalLayout.addWidget(self.pb_Character)
 
         self.verticalSpacer = QSpacerItem(20, 353, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
 
-        self.retranslateUi(Form)
+        self.retranslateUi(Sidebar)
 
-        QMetaObject.connectSlotsByName(Form)
+        QMetaObject.connectSlotsByName(Sidebar)
     # setupUi
 
-    def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"B1", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Form", u"B2", None))
-        self.pushButton_3.setText(QCoreApplication.translate("Form", u"B3", None))
+    def retranslateUi(self, Sidebar):
+        Sidebar.setWindowTitle(QCoreApplication.translate("Sidebar", u"Form", None))
+        self.pb_Train.setText(QCoreApplication.translate("Sidebar", u"Train", None))
+        self.pb_Editor.setText(QCoreApplication.translate("Sidebar", u"Scenario Editor", None))
+        self.pb_Tester.setText(QCoreApplication.translate("Sidebar", u"Scenario Tester", None))
+        self.pb_Character.setText(QCoreApplication.translate("Sidebar", u"Character Editor", None))
     # retranslateUi
 

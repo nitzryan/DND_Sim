@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Sidebar</class>
+ <widget class="QWidget" name="Sidebar">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pb_Train">
      <property name="sizeIncrement">
       <size>
        <width>1</width>
@@ -29,12 +29,12 @@
       </size>
      </property>
      <property name="text">
-      <string>B1</string>
+      <string>Train</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="pb_Editor">
      <property name="sizeIncrement">
       <size>
        <width>1</width>
@@ -48,12 +48,12 @@
       </size>
      </property>
      <property name="text">
-      <string>B2</string>
+      <string>Scenario Editor</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="pb_Tester">
      <property name="sizeIncrement">
       <size>
        <width>1</width>
@@ -67,7 +67,26 @@
       </size>
      </property>
      <property name="text">
-      <string>B3</string>
+      <string>Scenario Tester</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pb_Character">
+     <property name="sizeIncrement">
+      <size>
+       <width>1</width>
+       <height>1</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>1</width>
+       <height>1</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Character Editor</string>
      </property>
     </widget>
    </item>
