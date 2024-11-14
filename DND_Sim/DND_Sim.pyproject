@@ -1,6 +1,8 @@
 {
     "files": [
         "MainWindow.py",
+        "UI/Pages/Monster.py",
+        "UI/Pages/Monster.ui",
         "UI/Widgets/Sidebar.py",
         "UI/Widgets/Sidebar.ui",
         "form.ui"

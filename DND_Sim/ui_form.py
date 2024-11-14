@@ -23,9 +23,9 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(800, 600)
-        self.centralWidget = QWidget(MainWindow)
-        self.centralWidget.setObjectName(u"centralWidget")
-        self.horizontalLayout = QHBoxLayout(self.centralWidget)
+        self.centralLayout = QWidget(MainWindow)
+        self.centralLayout.setObjectName(u"centralLayout")
+        self.horizontalLayout = QHBoxLayout(self.centralLayout)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.sidebarLayout = QVBoxLayout()
         self.sidebarLayout.setObjectName(u"sidebarLayout")
@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addLayout(self.mainLayout)
 
         self.horizontalLayout.setStretch(1, 1)
-        MainWindow.setCentralWidget(self.centralWidget)
+        MainWindow.setCentralWidget(self.centralLayout)
         self.menuBar = QMenuBar(MainWindow)
         self.menuBar.setObjectName(u"menuBar")
         self.menuBar.setGeometry(QRect(0, 0, 800, 21))
