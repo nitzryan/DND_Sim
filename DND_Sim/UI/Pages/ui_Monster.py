@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QHBoxLayout, QLabel,
-    QLineEdit, QPushButton, QSizePolicy, QSpinBox,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractSpinBox, QApplication, QComboBox, QHBoxLayout,
+    QLabel, QLineEdit, QPushButton, QScrollArea,
+    QSizePolicy, QSpacerItem, QSpinBox, QVBoxLayout,
+    QWidget)
 
 class Ui_Monster(object):
     def setupUi(self, Monster):
@@ -103,6 +104,7 @@ class Ui_Monster(object):
         self.sbHP = QSpinBox(Monster)
         self.sbHP.setObjectName(u"sbHP")
         self.sbHP.setFont(font1)
+        self.sbHP.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbHP.setMaximum(9999)
 
         self.hpLayout.addWidget(self.sbHP)
@@ -122,31 +124,13 @@ class Ui_Monster(object):
         self.sbAC = QSpinBox(Monster)
         self.sbAC.setObjectName(u"sbAC")
         self.sbAC.setFont(font1)
+        self.sbAC.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbAC.setMaximum(9999)
 
         self.acLayout.addWidget(self.sbAC)
 
 
         self.statsLayout.addLayout(self.acLayout)
-
-        self.speedLayout = QHBoxLayout()
-        self.speedLayout.setObjectName(u"speedLayout")
-        self.label_3 = QLabel(Monster)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setFont(font1)
-        self.label_3.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-
-        self.speedLayout.addWidget(self.label_3)
-
-        self.sbSpeed = QSpinBox(Monster)
-        self.sbSpeed.setObjectName(u"sbSpeed")
-        self.sbSpeed.setFont(font1)
-        self.sbSpeed.setMaximum(9999)
-
-        self.speedLayout.addWidget(self.sbSpeed)
-
-
-        self.statsLayout.addLayout(self.speedLayout)
 
         self.strLayout = QHBoxLayout()
         self.strLayout.setObjectName(u"strLayout")
@@ -160,6 +144,7 @@ class Ui_Monster(object):
         self.sbStr = QSpinBox(Monster)
         self.sbStr.setObjectName(u"sbStr")
         self.sbStr.setFont(font1)
+        self.sbStr.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbStr.setMaximum(9999)
 
         self.strLayout.addWidget(self.sbStr)
@@ -179,6 +164,7 @@ class Ui_Monster(object):
         self.sbDex = QSpinBox(Monster)
         self.sbDex.setObjectName(u"sbDex")
         self.sbDex.setFont(font1)
+        self.sbDex.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbDex.setMaximum(9999)
 
         self.dexLayout.addWidget(self.sbDex)
@@ -198,6 +184,7 @@ class Ui_Monster(object):
         self.sbCon = QSpinBox(Monster)
         self.sbCon.setObjectName(u"sbCon")
         self.sbCon.setFont(font1)
+        self.sbCon.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbCon.setMaximum(9999)
 
         self.conLayout.addWidget(self.sbCon)
@@ -217,6 +204,7 @@ class Ui_Monster(object):
         self.sbInt = QSpinBox(Monster)
         self.sbInt.setObjectName(u"sbInt")
         self.sbInt.setFont(font1)
+        self.sbInt.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbInt.setMaximum(9999)
 
         self.intLayout.addWidget(self.sbInt)
@@ -236,6 +224,7 @@ class Ui_Monster(object):
         self.sbWis = QSpinBox(Monster)
         self.sbWis.setObjectName(u"sbWis")
         self.sbWis.setFont(font1)
+        self.sbWis.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbWis.setMaximum(9999)
 
         self.wisLayout.addWidget(self.sbWis)
@@ -255,6 +244,7 @@ class Ui_Monster(object):
         self.sbCha = QSpinBox(Monster)
         self.sbCha.setObjectName(u"sbCha")
         self.sbCha.setFont(font1)
+        self.sbCha.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbCha.setMaximum(9999)
 
         self.chaLayout.addWidget(self.sbCha)
@@ -274,6 +264,7 @@ class Ui_Monster(object):
         self.sbProf = QSpinBox(Monster)
         self.sbProf.setObjectName(u"sbProf")
         self.sbProf.setFont(font1)
+        self.sbProf.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbProf.setMaximum(9999)
 
         self.profLayout.addWidget(self.sbProf)
@@ -293,6 +284,7 @@ class Ui_Monster(object):
         self.sbXP = QSpinBox(Monster)
         self.sbXP.setObjectName(u"sbXP")
         self.sbXP.setFont(font1)
+        self.sbXP.setButtonSymbols(QAbstractSpinBox.NoButtons)
         self.sbXP.setMaximum(9999)
 
         self.xpLayout.addWidget(self.sbXP)
@@ -303,10 +295,112 @@ class Ui_Monster(object):
 
         self.editorLayout.addLayout(self.statsLayout)
 
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.editorLayout.addItem(self.horizontalSpacer)
+
         self.abilitiesLayout = QVBoxLayout()
         self.abilitiesLayout.setObjectName(u"abilitiesLayout")
+        self.movementLayout = QVBoxLayout()
+        self.movementLayout.setObjectName(u"movementLayout")
+        self.label_12 = QLabel(Monster)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setAlignment(Qt.AlignCenter)
+
+        self.movementLayout.addWidget(self.label_12)
+
+        self.saMovement = QScrollArea(Monster)
+        self.saMovement.setObjectName(u"saMovement")
+        self.saMovement.setWidgetResizable(True)
+        self.saMovementContent = QWidget()
+        self.saMovementContent.setObjectName(u"saMovementContent")
+        self.saMovementContent.setGeometry(QRect(0, 0, 364, 129))
+        self.saMovement.setWidget(self.saMovementContent)
+
+        self.movementLayout.addWidget(self.saMovement)
+
+        self.pbAddMovement = QPushButton(Monster)
+        self.pbAddMovement.setObjectName(u"pbAddMovement")
+
+        self.movementLayout.addWidget(self.pbAddMovement)
+
+
+        self.abilitiesLayout.addLayout(self.movementLayout)
+
+        self.verticalLayout_2 = QVBoxLayout()
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.label_13 = QLabel(Monster)
+        self.label_13.setObjectName(u"label_13")
+        self.label_13.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_2.addWidget(self.label_13)
+
+        self.saActions = QScrollArea(Monster)
+        self.saActions.setObjectName(u"saActions")
+        self.saActions.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_2 = QWidget()
+        self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 364, 129))
+        self.saActions.setWidget(self.scrollAreaWidgetContents_2)
+
+        self.verticalLayout_2.addWidget(self.saActions)
+
+        self.pbAddAction = QPushButton(Monster)
+        self.pbAddAction.setObjectName(u"pbAddAction")
+
+        self.verticalLayout_2.addWidget(self.pbAddAction)
+
+
+        self.abilitiesLayout.addLayout(self.verticalLayout_2)
+
+        self.verticalLayout_3 = QVBoxLayout()
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.label_3 = QLabel(Monster)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.label_3)
+
+        self.saLegendaryActions = QScrollArea(Monster)
+        self.saLegendaryActions.setObjectName(u"saLegendaryActions")
+        self.saLegendaryActions.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_3 = QWidget()
+        self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 364, 129))
+        self.saLegendaryActions.setWidget(self.scrollAreaWidgetContents_3)
+
+        self.verticalLayout_3.addWidget(self.saLegendaryActions)
+
+        self.pbAddLegendary = QPushButton(Monster)
+        self.pbAddLegendary.setObjectName(u"pbAddLegendary")
+
+        self.verticalLayout_3.addWidget(self.pbAddLegendary)
+
+
+        self.abilitiesLayout.addLayout(self.verticalLayout_3)
+
+        self.verticalLayout_4 = QVBoxLayout()
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.label_14 = QLabel(Monster)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_4.addWidget(self.label_14)
+
+        self.damageTypesLayout = QHBoxLayout()
+        self.damageTypesLayout.setObjectName(u"damageTypesLayout")
+
+        self.verticalLayout_4.addLayout(self.damageTypesLayout)
+
+
+        self.abilitiesLayout.addLayout(self.verticalLayout_4)
+
 
         self.editorLayout.addLayout(self.abilitiesLayout)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.editorLayout.addItem(self.horizontalSpacer_2)
 
         self.spellsLayout = QVBoxLayout()
         self.spellsLayout.setObjectName(u"spellsLayout")
@@ -373,15 +467,21 @@ class Ui_Monster(object):
         self.cbSize.setPlaceholderText(QCoreApplication.translate("Monster", u"Size", None))
         self.label.setText(QCoreApplication.translate("Monster", u"HP", None))
         self.label_2.setText(QCoreApplication.translate("Monster", u"AC", None))
-        self.label_3.setText(QCoreApplication.translate("Monster", u"Speed", None))
         self.label_4.setText(QCoreApplication.translate("Monster", u"STR", None))
         self.label_5.setText(QCoreApplication.translate("Monster", u"DEX", None))
         self.label_6.setText(QCoreApplication.translate("Monster", u"CON", None))
         self.label_7.setText(QCoreApplication.translate("Monster", u"INT", None))
         self.label_8.setText(QCoreApplication.translate("Monster", u"WIS", None))
         self.label_9.setText(QCoreApplication.translate("Monster", u"CHA", None))
-        self.label_10.setText(QCoreApplication.translate("Monster", u"Proficiency", None))
+        self.label_10.setText(QCoreApplication.translate("Monster", u"Prof", None))
         self.label_11.setText(QCoreApplication.translate("Monster", u"XP", None))
+        self.label_12.setText(QCoreApplication.translate("Monster", u"Movement", None))
+        self.pbAddMovement.setText(QCoreApplication.translate("Monster", u"Add", None))
+        self.label_13.setText(QCoreApplication.translate("Monster", u"Actions", None))
+        self.pbAddAction.setText(QCoreApplication.translate("Monster", u"Add", None))
+        self.label_3.setText(QCoreApplication.translate("Monster", u"Legendary Actions", None))
+        self.pbAddLegendary.setText(QCoreApplication.translate("Monster", u"Add", None))
+        self.label_14.setText(QCoreApplication.translate("Monster", u"Damage Types", None))
         self.pbReset.setText(QCoreApplication.translate("Monster", u"Reset", None))
         self.pbUpdate.setText(QCoreApplication.translate("Monster", u"Update", None))
         self.pbCopy.setText(QCoreApplication.translate("Monster", u"Copy", None))

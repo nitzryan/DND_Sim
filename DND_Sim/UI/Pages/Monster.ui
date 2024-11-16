@@ -206,6 +206,9 @@ QComboBox {
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
            <property name="maximum">
             <number>9999</number>
            </property>
@@ -237,36 +240,8 @@ QComboBox {
              <pointsize>12</pointsize>
             </font>
            </property>
-           <property name="maximum">
-            <number>9999</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="speedLayout">
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Speed</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="sbSpeed">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
            </property>
            <property name="maximum">
             <number>9999</number>
@@ -299,6 +274,9 @@ QComboBox {
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
            <property name="maximum">
             <number>9999</number>
            </property>
@@ -329,6 +307,9 @@ QComboBox {
             <font>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
            </property>
            <property name="maximum">
             <number>9999</number>
@@ -361,6 +342,9 @@ QComboBox {
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
            <property name="maximum">
             <number>9999</number>
            </property>
@@ -391,6 +375,9 @@ QComboBox {
             <font>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
            </property>
            <property name="maximum">
             <number>9999</number>
@@ -423,6 +410,9 @@ QComboBox {
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
            <property name="maximum">
             <number>9999</number>
            </property>
@@ -454,6 +444,9 @@ QComboBox {
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
            <property name="maximum">
             <number>9999</number>
            </property>
@@ -471,7 +464,7 @@ QComboBox {
             </font>
            </property>
            <property name="text">
-            <string>Proficiency</string>
+            <string>Prof</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -484,6 +477,9 @@ QComboBox {
             <font>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
            </property>
            <property name="maximum">
             <number>9999</number>
@@ -516,6 +512,9 @@ QComboBox {
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
            <property name="maximum">
             <number>9999</number>
            </property>
@@ -526,7 +525,165 @@ QComboBox {
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="abilitiesLayout"/>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="abilitiesLayout">
+       <item>
+        <layout class="QVBoxLayout" name="movementLayout">
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>Movement</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="saMovement">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="saMovementContent">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>364</width>
+              <height>129</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pbAddMovement">
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>Actions</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="saActions">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>364</width>
+              <height>129</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pbAddAction">
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Legendary Actions</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="saLegendaryActions">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>364</width>
+              <height>129</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pbAddLegendary">
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>Damage Types</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="damageTypesLayout"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
      <item>
       <layout class="QVBoxLayout" name="spellsLayout"/>

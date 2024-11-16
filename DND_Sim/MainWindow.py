@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         self.sidebar = Sidebar()
         self.ui.sidebarLayout.addWidget(self.sidebar)
 
-        response = requests.get("https://www.dnd5eapi.co/api/monsters/acolyte")
+        response = requests.get("https://www.dnd5eapi.co/api/monsters/skeleton")
         data = response.json()
         self.monsterPage = Monster(data)
         self.ui.mainLayout.addWidget(self.monsterPage)

@@ -3,6 +3,10 @@
         "MainWindow.py",
         "UI/Pages/Monster.py",
         "UI/Pages/Monster.ui",
+        "UI/Widgets/Monster/DamageButton.py",
+        "UI/Widgets/Monster/DamageButton.ui",
+        "UI/Widgets/Monster/MonsterMovement.py",
+        "UI/Widgets/Monster/MonsterMovement.ui",
         "UI/Widgets/Sidebar.py",
         "UI/Widgets/Sidebar.ui",
         "form.ui"
